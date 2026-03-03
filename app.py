@@ -4,7 +4,7 @@ import psycopg2
 import plotly.express as px
 import requests
 import os
-import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
