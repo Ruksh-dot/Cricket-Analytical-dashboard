@@ -4,7 +4,12 @@ import psycopg2
 import plotly.express as px
 import requests
 import os
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+RAPID_API_KEY = os.getenv("RAPID_API_KEY")
 
 st.set_page_config(layout="wide")
 
@@ -21,7 +26,7 @@ player_batting_url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/{p
 player_stats_url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/{player_id}"
 
 
-RAPID_API_KEY ="5e4e834bd4msh76a8f080b4f36c7p10f673jsn56a28544087d"
+RAPID_API_KEY =os.getenv("RAPID_API_KEY")
 
 HEADERS = {
 	"X-RapidAPI-Key": RAPID_API_KEY,
